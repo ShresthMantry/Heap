@@ -48,6 +48,7 @@ void insert(Heap heap, int data)
             int temp = arr[parent];
             arr[parent] = arr[index];
             arr[index] = temp;
+            index=parent;
         }
         else
         {
@@ -103,13 +104,23 @@ int delete(Heap heap)
 
 int main()
 {
-    Heap heap = newHeap(10);
+    Heap heap = newHeap(12);
 
-    insert(heap, 50);
-    insert(heap, 55);
-    insert(heap, 53);
-    insert(heap, 52);
-    insert(heap, 54);
+    insert(heap, 32);
+    printHeap(heap);
+    insert(heap,7);
+    printHeap(heap);
+    insert(heap,8);
+    printHeap(heap);
+    insert(heap, 63);
+    // insert(heap, 59);
+    // insert(heap, 44);
+    // insert(heap, 4);
+    // insert(heap, 88);
+    // insert(heap, 5);
+    // insert(heap, 29);
+    // insert(heap, 45);
+    // insert(heap, 2);
 
     printHeap(heap);
 
